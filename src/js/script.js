@@ -96,11 +96,11 @@ const input = document.querySelector(".campoBuscaPorNome")
 const campoBuscaPorNome = () => {
 
     const buscaPorNome = produtos.filter((produto) => {
-        return produto.nome === input.value;
+        return produto.nome.toLocaleLowerCase() === input.value
     });
 
     montarListaProdutos(buscaPorNome);
-    valorTotalDosProduto(buscaPorNome)
+    valorTotalDosProduto(buscaPorNome);
 }
 
 // Selecionando botao em nosso HTML
